@@ -26,7 +26,7 @@ class MyDrawWidget(QWidget):
             return
 
         elif self.myFlag == 0:
-            r, g, b, a = 255, 255, 0, 255
+            r, g, b, a = random.randint(0, 255), random.randint(0, 255), random.randint(0, 255), 255
             qp.setBrush(QColor(r, g, b, a))
             x, y = random.randint(1, self.width() - 2), random.randint(1, self.height() - 2)
             if x < self.width() // 2:
@@ -46,6 +46,6 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     deskX, deskY = QApplication.desktop().width(), QApplication.desktop().height()
 
-    window = UI.MainWindow("Лабораторная 4", deskX // 2 - 500, deskY // 2 - 400, 1000, 800)
+    window = UI.MainWindow("Фигня228", deskX // 2 - 500, deskY // 2 - 400, 1000, 800)
     window.show()
     sys.exit(app.exec())
